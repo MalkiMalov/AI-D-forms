@@ -4,23 +4,23 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-#the function sends an email with the summary report file, the sender is the MADA email
+#The function sends an email with the summary report file, the sender is the MADA email
 def send_mail():
 	fromaddr = "madadocuments1@gmail.com"
-	toaddr = "YOUR EMAIL" #enter the receiver email address
+	toaddr = "YOUR EMAIL" #Enter the receiver email address
 
 	msg = MIMEMultipart()
 
-	msg['From'] = fromaddr
-	msg['To'] = toaddr
-	msg['Subject'] = "Summary Report"
+	msg['From'] = fromaddr #Sender
+	msg['To'] = toaddr #Reciever
+	msg['Subject'] = "Summary Report" #Subject of the email
 
-	body = "summary"
+	body = "summary" #Body of the email
 
 	msg.attach(MIMEText(body, 'plain'))
 
 	filename = "summaryReport.txt"
-	attachment = open(r"summaryReport.txt", "rb")
+	attachment = open(r"summaryReport.txt", "rb") #Attch the summary file 
 
 	part = MIMEBase('application', 'octet-stream')
 	part.set_payload((attachment).read())
@@ -36,4 +36,3 @@ def send_mail():
 	server.sendmail(fromaddr, toaddr, text)
 	server.quit()
 
-#send_mail()
