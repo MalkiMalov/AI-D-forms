@@ -4,9 +4,10 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
+#the function sends an email with the summary report file, the sender is the MADA email
 def send_mail():
 	fromaddr = "madadocuments1@gmail.com"
-	toaddr = "YOUR EMAIL"
+	toaddr = "YOUR EMAIL" #enter the receiver email address
 
 	msg = MIMEMultipart()
 
