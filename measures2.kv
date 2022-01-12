@@ -1,0 +1,66 @@
+#:include templates.kv
+#:include menu
+
+<measures2>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Time:
+                on_press: app.root.current = "times"
+            MenuIcon:
+                on_press: app.root.current = "menu"
+
+        Title:
+            text: "םידדמ"
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y:0.6
+
+            Field:
+                id: Pupils
+                hint_text: 'םינושיא'
+
+            Field:
+                id: Speech
+                hint_text: 'רוביד'
+
+            Field:
+                id: Breathing
+                hint_text: 'המישנ'
+
+            Field:
+                id: RespiratoryRate
+                hint_text: 'המישנ בצק'
+
+            Field:
+                id: OS%
+                hint_text: 'היצרוטס'
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.2
+
+            Label:
+
+            Label:
+
+            Microphone:
+                on_press:root.fill_box()
+
+            Label:
+
+            Previous:
+                on_press: app.root.current = "measures1"
+
+
+
+

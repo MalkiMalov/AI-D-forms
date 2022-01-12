@@ -1,0 +1,88 @@
+#:include templates.kv
+#:include menu.kv
+
+<medicalHistory>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Time:
+                on_press: app.root.current = "times"
+            MenuIcon:
+                on_press: app.root.current = "menu"
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+
+        Title:
+            text: "תיאופר הירוטסיה"
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y:0.4
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y:0.1
+
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y:0.1
+                Label:
+                Label:
+                Field:
+                    id: BackgroundDiseases
+                    hint_text: 'עקר תולחמ'
+                    size_hint_x:8
+                Label:
+                Label:
+                Field:
+                    id: InfectiousDiseases
+                    hint_text: 'תוימוהיז תולחמ'
+                    size_hint_x:8
+                Label:
+                Label:
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y:0.1
+                Label:
+                Label:
+                Field:
+                    id: Allergies
+                    hint_text: 'תויושיגר'
+                    size_hint_x:8
+                Label:
+                Label:
+                Field:
+                    id: Medications
+                    hint_text: 'יתפורת לופיט'
+                    size_hint_x:8
+                Label:
+                Label:
+
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.2
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.2
+
+            Label:
+
+            Label:
+
+            Microphone:
+                on_press:root.fill_box()
+
+            Label:
+
+            Previous:
+                on_press: app.root.current = "menu"
+
+
+
+

@@ -1,0 +1,66 @@
+#:include templates.kv
+#:include menu.kv
+
+<demographic>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Time:
+                on_press: app.root.current = "times"
+            MenuIcon:
+                on_press: app.root.current = "menu"
+
+
+        Title:
+            text: "םיישיא םיטרפ"
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y:0.6
+
+            Field:
+                id: FirstName
+                hint_text: 'יטרפ םש'
+
+            Field:
+                id: LastName
+                hint_text: 'החפשמ םש'
+
+            Field:
+                id: Age
+                hint_text: 'ליג'
+
+            Field:
+                id: ID
+                hint_text: 'תוהז תדועת'
+
+            Field:
+                id: Gender
+                hint_text: 'רדגמ'
+
+
+        BoxLayout:
+            size_hint_y:0.1
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.2
+
+            Label:
+
+            Label:
+
+            Microphone:
+                on_press:root.fill_box()
+
+            Label:
+
+            Previous:
+                on_press: app.root.current = "menu"
+
+
+
+

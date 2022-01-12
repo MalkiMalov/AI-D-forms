@@ -1,0 +1,122 @@
+#:include menu.kv
+#:include templates.kv
+
+
+<times>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y:0.05
+
+        Title:
+            text: "םינמז"
+
+
+        BoxLayout:
+            size_hint_y:0.05
+
+        BoxLayout:
+            size_hint_y:0.6
+            orientation: 'vertical'
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Label:
+                TimeButton:
+                    id: ArrivalTime
+                    halign:'center'
+                    on_press:root.times_button_press('ArrivalTime')
+                TimeLabel:
+                    id: ArrivalTimeLabel
+                    halign:'center'
+                    text: "העגה"
+                Label:
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Label:
+                TimeButton:
+                    id: DepartureTime
+                    halign:'center'
+                    on_press:root.times_button_press('DepartureTime')
+                TimeLabel:
+                    id: DepartureTimeLabel
+                    halign:'center'
+                    text: 'האיצי'
+                Label:
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Label:
+                TimeButton:
+                    id: AtTheDestination
+                    halign:'center'
+                    on_press:root.times_button_press('AtTheDestination')
+                TimeLabel:
+                    id: AtTheDestinationLabel
+                    halign:'center'
+                    text: "דעיב"
+                Label:
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Label:
+                TimeButton:
+                    id: TransportToHospital
+                    halign:'center'
+                    on_press:root.times_button_press('TransportToHospital')
+                TimeLabel:
+                    id: TransportToHospitalLabel
+                    halign:'center'
+                    text: "הנפמ"
+                Label:
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Label:
+                TimeButton:
+                    id: AtTheStation
+                    halign:'center'
+                    on_press:root.times_button_press('AtTheStation')
+                TimeLabel:
+                    id: AtTheStationLabel
+                    halign:'center'
+                    text: "הנחתב"
+                Label:
+
+            BoxLayout:
+                orientation: 'horizontal'
+                Label:
+                TimeButton:
+                    id: Available
+                    halign:'center'
+                    on_press:root.times_button_press('Available')
+                TimeLabel:
+                    id: AvailableLabel
+                    halign:'center'
+                    text: "יונפ"
+                Label:
+
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+
+            Next:
+                on_press: app.root.current = "menu"
+
+            Label:
+
+            Finish:
+                on_press:app.end_button_press()
+
+            Label:
+
+            Label:
+

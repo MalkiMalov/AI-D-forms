@@ -1,0 +1,96 @@
+#:include templates.kv
+#:include menu.kv
+
+<birth>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Time:
+                on_press: app.root.current = "times"
+            MenuIcon:
+                on_press: app.root.current = "menu"
+
+        Title:
+            text: "הדיל"
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.4
+            Label:
+            Label:
+            Field:
+                id: Newborn
+                hint_text: 'םידולי'
+                size_hint_x:3.55
+                size_hint_y:0.875
+            Label:
+            BoxLayout:
+                orientation: 'vertical'
+                Field:
+                    id: Presentation
+                    hint_text: 'גצמ'
+                    size_hint_x:2.83
+
+                Field:
+                    id: Placenta
+                    hint_text: 'היילש'
+                    size_hint_x:2.83
+
+                Field:
+                    id: StatusUponArrival
+                    hint_text: 'העגהב בצמ'
+                    size_hint_x:2.83
+            Label:
+            Label:
+            Label:
+            Label:
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.2
+            Label:
+            Label:
+            Field:
+                id: PregnancyWeek
+                hint_text: 'ןוירה עובש'
+                size_hint_x:2
+            Label:
+            Field:
+                id: PregnancyNumber
+                hint_text: 'ןוירה רפסמ'
+                size_hint_x:2
+            Label:
+            Field:
+                id: BirthNumber
+                hint_text: 'הדיל רפסמ'
+                size_hint_x:2
+            Label:
+            Label:
+
+
+        BoxLayout:
+            size_hint_y:0.1
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.2
+
+            Label:
+
+            Label:
+
+            Microphone:
+                on_press:root.fill_box()
+
+            Label:
+
+            Previous:
+                on_press: app.root.current = "menu"
+
+
+
+

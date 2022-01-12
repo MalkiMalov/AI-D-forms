@@ -1,0 +1,48 @@
+#:include templates.kv
+#:include measures1.kv
+#:include medicalHistory.kv
+#:include birth.kv
+#:include demographic.kv
+
+<menu>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Time:
+                on_press: app.root.current = "times"
+        BoxLayout:
+            size_hint_y:0.3
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Label:
+            Label:
+            MenuBox:
+                text: "תיאופר הירוטסיה"
+                on_press:app.root.current = "medicalHistory"
+            Label:
+            MenuBox:
+                text: "  םיישיא םיטרפ  "
+                on_press:app.root.current = "demographic"
+            Label:
+            Label:
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y:0.1
+            Label:
+            Label:
+            MenuBox:
+                text: "        הדיל        "
+                on_press:app.root.current = "birth"
+            Label:
+            MenuBox:
+                text: "        םידדמ      "
+                on_press:app.root.current = "measures1"
+            Label:
+            Label:
+
+        BoxLayout:
+            size_hint_y:0.4

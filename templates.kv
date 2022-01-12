@@ -1,0 +1,76 @@
+<Title@MDLabel>:
+    size_hint_y:0.1
+    halign: "center"
+    theme_text_color: "Custom"
+    text_color: 0.7764705882, 0, 0, 1
+    font_name:'Arial.ttf'
+    font_size:'50sp'
+
+<TimeButton@MDRectangleFlatIconButton>:
+    text:"העש דעת"
+    font_name:"Arial.ttf"
+    theme_text_color: "Custom"
+    md_bg_color: 0.8078431372,0.8078431372,0.8078431372,1
+    text_color: 0.7764705882, 0, 0, 1
+    line_color: 0.7764705882, 0, 0, 1
+    icon_color: 0.7764705882, 0, 0, 1
+    icon: "clock-time-three-outline"
+
+
+<TimeLabel@MDLabel>:
+    theme_text_color: "Custom"
+    text_color: 0.7764705882, 0, 0, 1
+    font_name:'Arial.ttf'
+
+<Field@MDTextField>:
+    font_name_hint_text:'Arial.ttf'
+    font_name:'Arial.ttf'
+    mode: "rectangle"
+    halign: "right"
+    line_color_normal: 1, 0, 1, 1
+    line_color_focus: 0.7764705882, 0, 0, 1
+    size_hint_x:0.5
+    pos_hint :{'x':.25}
+
+<Next@MDRoundFlatIconButton>:
+    icon: "arrow-left-bold-circle-outline"
+    text: "אבה"
+    font_name:"Arial.ttf"
+    text_color:0.7764705882, 0, 0, 1
+    line_color: 0.7764705882, 0, 0, 1
+    icon_color: 0.7764705882, 0, 0, 1
+    on_press: app.root.transition.direction = 'right'
+
+<Microphone@MDFloatingActionButton>:
+    icon: "microphone"
+    md_bg_color:0.7764705882, 0, 0, 1
+
+<Finish@MDFloatingActionButton>:
+    icon: "file-lock"
+    md_bg_color:0.7764705882, 0, 0, 1
+
+<Time@MDIconButton>:
+    icon: "clock-time-three-outline"
+    user_font_size: "20sp"
+
+<MenuIcon@MDIconButton>:
+    icon: "menu"
+    user_font_size: "20sp"
+
+<Previous@MDRoundFlatIconButton>:
+    text: "םדוקה"
+    icon: "arrow-right-bold-circle-outline"
+    font_name:"Arial.ttf"
+    text_color:0.7764705882, 0, 0, 1
+    line_color: 0.7764705882, 0, 0, 1
+    icon_color: 0.7764705882, 0, 0, 1
+    on_press: app.root.transition.direction = 'left'
+
+<MenuBox@MDRectangleFlatButton>:
+    font_name:'Arial.ttf'
+    text_color: 0.7764705882, 0, 0, 1
+    line_color:0.7764705882, 0, 0, 1
+    on_press: app.root.transition.direction = 'right'
+    font_size:'20sp'
+
+
