@@ -1,4 +1,4 @@
-#fill the right fields
+#fill the fields in the GUI
 import difflib
 from limitedRecord import rec
 
@@ -61,7 +61,7 @@ def fields_values(s,fields):
 #fill the fields with their values in the GUI
 def fill_box(self,fields,fields_dict):
 	try:
-		rec() #turn on the record and make the text from the speech recognition
+		rec() #turn on the record from limitedRecord.py and make the text from the speech recognition
 		f = open("text_from_speech.txt", "r") #the text from the speech recognition
 		s = f.readline()
 		full_dict = fields_values(s, fields) #get the dictionary of the fields and their values, according to the given text
