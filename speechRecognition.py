@@ -6,7 +6,7 @@ def recognition(file):
     with audiofile as source:
         clip = r.record(source)
     s = r.recognize_google(clip, language="he-IL")
-    f = open("out.txt", "w")
+    f = open("text_from_speech.txt", "w")
     f.write(str(s))
     print(s)
     return
