@@ -65,7 +65,7 @@ def fields_values(s,fields):
 def fill_box(self,fields,fields_dict):
 	try:
 		rec()
-		f = open("out.txt", "r")
+		f = open("text_from_speech.txt", "r")
 		s = f.readline()
 
 		full_dict = fields_values(s, fields)
