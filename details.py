@@ -2,19 +2,25 @@ from kivy.uix.screenmanager import Screen, SlideTransition
 from kivymd.uix.dialog import MDDialog
 import words
 import time
+# Each page in the GUI should have a class added
+# In some class we have two dictionaries by name fields and fields_dict
+# in fields we allow the user to say specific words before the data he wants
+# to enter so that we can know which data to enter into which fields by the
+# function fill_box from word.py
+# in fields_dict we have connected the specific words that the user can
+# say to the ID of the correct fields
 
 class Error(Screen):
     def reconnect(self):
-        self.manager.transition = SlideTransition(direction="right")
+        self.manager.transition = SlideTransition(direction="right")  # Slides the page to the right
         self.manager.current = 'login'
         self.manager.get_screen('login').resetForm()
 
 class times(Screen):
     def times_button_press(self,id):
           t = time.time()
-          self.ids[id].text= time.strftime('%H:%M', time.localtime(t))
-          self.ids[id].text_color=(0.7764705882, 0, 0, 1)
-
+          self.ids[id].text= time.strftime('%H:%M', time.localtime(t)) # Takes the current time in a format of hours and minutes and puts it into the button
+       
 class demographic(Screen):
     def fill_box(self):
         fields = {"שם פרטי","שם משפחה","גיל","תז","תעודת זהות","מגדר","מין"}
